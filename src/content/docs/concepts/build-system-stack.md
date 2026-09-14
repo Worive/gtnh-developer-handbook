@@ -32,12 +32,8 @@ Start with the repository's README and
 GTNHGradle project, the documented `propertiesHelp` task lists available
 properties and their descriptions.
 
-The current
-[ExampleMod advanced guidance](https://github.com/GTNewHorizons/ExampleMod1.7.10#advanced)
-also supports local-only `addon.local.gradle` and `addon.late.local.gradle`
-files. Use those only when the selected repository includes the same mechanism;
-do not commit personal run arguments or replace shared build logic for a local
-preference.
+For repository-supported local customization, see
+[Use local Gradle overrides](/gtnh-developer-handbook/how-to/local-gradle-overrides/).
 
 If a build migration or updater rewrites files, review the resulting diff as
 code. Generated output is not evidence that the migration understood every

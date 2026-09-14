@@ -1,0 +1,86 @@
+---
+title: Test cross-repository changes
+description: Publish a modified GTNH mod locally and use that version from a dependent mod.
+sidebar:
+  order: 4
+---
+
+import { Steps, TabItem, Tabs } from '@astrojs/starlight/components';
+
+Use this when a change spans two mod repositories and the dependent mod needs
+to build against an unpublished version of the dependency. This workflow is
+independently summarized from the official
+[GTNH Maven Local Repository instructions](https://wiki.gtnewhorizons.com/wiki/Development#Maven_Local_Repository).
+
+<Steps>
+
+1. **Publish the modified dependency locally.**
+
+   Choose a temporary version and run `publishToMavenLocal` from the modified
+   dependency mod's root directory. Reuse exactly the same version in the
+   dependent mod. For example:
+
+   <Tabs syncKey="operating-system">
+     <TabItem label="Linux, macOS, or Git Bash">
+
+   ```shell
+   VERSION=99.99.99 ./gradlew publishToMavenLocal
+   ```
+
+     </TabItem>
+     <TabItem label="Windows PowerShell">
+
+   ```powershell
+   $env:VERSION = '99.99.99'
+   .\gradlew.bat publishToMavenLocal
+   Remove-Item Env:VERSION
+   ```
+
+     </TabItem>
+   </Tabs>
+
+   :::caution[The folder name becomes the package name]
+   The published package is named after the project's local folder, not its
+   repository. For example, if you clone the `NotEnoughItems` repository into
+   a folder named `nei`, the package is published as `nei`, not
+   `NotEnoughItems`.
+   :::
+
+   **Expected result:** GTNHGradle reports the version override and Gradle
+   finishes `publishToMavenLocal` successfully. The current
+   [GTNHGradle version module](https://github.com/GTNewHorizons/GTNHGradle/blob/master/src/main/java/com/gtnewhorizons/gtnhgradle/modules/GitVersionModule.java)
+   reads the uppercase `VERSION` environment variable.
+
+2. **Enable Maven Local in the dependent mod.**
+
+   Check `repositories.gradle` first; some repositories already declare it. If
+   it is missing, add `mavenLocal()` to the existing `repositories` block:
+
+   ```groovy
+   repositories {
+       mavenLocal()
+   }
+   ```
+
+3. **Use the local version in the dependent mod.**
+
+   Add or update the dependency in `dependencies.gradle`, using the same group,
+   artifact, configuration, and classifier that repository normally requires.
+   Set its version to the value published in step 1: `99.99.99` in this example.
+   Do not add a `resolutionStrategy.force` rule.
+
+4. **Refresh and test the dependent mod.**
+
+   Refresh its Gradle model, then run the repository's normal verified build or
+   development-client task. If the dependency changes again, publish it locally
+   again before rebuilding the dependent mod.
+
+</Steps>
+
+:::caution[Local means local]
+GitHub Actions cannot access artifacts from your machine. If `mavenLocal()` was
+added only for this test, remove that addition before opening a pull request.
+Use an online pre-release version when CI must resolve the cross-mod dependency;
+the official GTNH guide recommends asking a GTNH team member when you cannot
+publish that pre-release.
+:::

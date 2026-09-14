@@ -1,0 +1,21 @@
+---
+title: CI problems
+description: Diagnose differences between a local build and GitHub Actions.
+sidebar:
+  order: 5
+---
+
+**Signs:** the same commit passes locally and fails on GitHub Actions, or the
+reverse.
+
+1. Open the exact workflow run and note the failing job, JDK, operating system,
+   command, and arguments.
+2. Compare those with your local command and `java -version`.
+3. Test the committed diff from a clean checkout; untracked files and warm caches
+   can hide missing inputs.
+4. Check case-sensitive paths, line endings, executable bits, locale, and tests
+   that depend on time or ordering.
+5. Reproduce the workflow's documented task, not an assumed equivalent.
+
+GTNH mod CI may delegate to a shared workflow. Follow the referenced workflow
+and revision before deciding what CI actually runs.

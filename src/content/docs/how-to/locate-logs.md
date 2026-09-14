@@ -54,5 +54,5 @@ target repository's issue template. The organization also provides a central
 but a confirmed repository-specific bug should be reported where its maintainers
 request.
 
-Next: diagnose a [development client startup failure](/gtnh-developer-handbook/troubleshooting/common-problems/#development-client-does-not-start)
-or a [local/CI mismatch](/gtnh-developer-handbook/troubleshooting/common-problems/#local-and-ci-disagree).
+Next: diagnose a [development-client failure](/gtnh-developer-handbook/troubleshooting/development-client/)
+or a [local/CI mismatch](/gtnh-developer-handbook/troubleshooting/ci/).

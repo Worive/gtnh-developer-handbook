@@ -40,5 +40,5 @@ tag exists, the release published successfully, or DreamAssembler selected that
 version.
 
 Authorized maintainers can continue with
-[Tag a mod version](/gtnh-developer-handbook/maintainers/tag-mod-version/) or
+[Perform release operations](/gtnh-developer-handbook/maintainers/release-operations/) or
 [Run a daily build manually](/gtnh-developer-handbook/maintainers/run-daily-build/).

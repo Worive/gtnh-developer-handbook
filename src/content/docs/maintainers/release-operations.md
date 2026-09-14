@@ -1,8 +1,8 @@
 ---
-title: Tag a mod version
-description: Decide between automatic and manual tagging, create a verified tag, and monitor publication.
+title: Release operations
+description: Decide between automatic and manual mod releases, tag safely, and verify publication.
 sidebar:
-  order: 2
+  order: 3
 ---
 
 :::caution[Maintainer operation]

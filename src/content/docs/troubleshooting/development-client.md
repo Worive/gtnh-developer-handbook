@@ -1,0 +1,19 @@
+---
+title: Development-client problems
+description: Diagnose run tasks that exit or fail to start Minecraft.
+sidebar:
+  order: 3
+---
+
+**Signs:** the run task exits, the game window never appears, or startup crashes.
+
+1. Confirm the chosen run task exists in `tasks --all`.
+2. Run it from the terminal once so the complete Gradle output is preserved.
+3. Follow the printed working-directory, log, or crash-report paths.
+4. Find the first exception caused by project code or a dependency; later errors
+   may only describe shutdown.
+5. Compare JVM arguments and working directory with the generated IntelliJ run
+   configuration before changing memory or graphics settings.
+
+GTNHGradle projects can generate run configurations, but older or specialized
+repositories may provide different runs. Follow the current checkout.

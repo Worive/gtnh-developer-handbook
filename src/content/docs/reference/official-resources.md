@@ -1,5 +1,5 @@
 ---
-title: Official resources and repositories
+title: Official resources
 description: Authoritative starting points for GTNH development facts and support.
 sidebar:
   order: 2
@@ -16,31 +16,15 @@ sidebar:
   against the repository you are changing.
 - [Official GTNH Discord](https://discord.gg/EXshrPV) — community and developer
   discussion. Bring repository links, logs, and what you already tried.
-- [Mod support spreadsheet](https://docs.google.com/spreadsheets/d/1LHd8c4FLLHiJqsuTppF2XFTE6bh-mXE7afVwGbzOKms)
-  — consult its current legend instead of guessing a mod's support status.
 - [Central modpack issue tracker](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/issues)
   — pack-level reports and coordination.
 - [Developer's Code of Conduct](https://github.com/GTNewHorizons/.github/blob/master/CODE_OF_CONDUCT.md)
   and [contribution guidelines](https://github.com/GTNewHorizons/.github/blob/master/CONTRIBUTING.md)
   — read the current files before submitting changes.
 
-## Development tooling
-
-- [ExampleMod1.7.10](https://github.com/GTNewHorizons/ExampleMod1.7.10) — starter,
-  build-layout example, FAQ, and migration material for 1.7.10 mods.
-- [GTNHGradle](https://github.com/GTNewHorizons/GTNHGradle) — shared GTNH Gradle
-  build logic and configuration reference.
-- [RetroFuturaGradle](https://github.com/GTNewHorizons/RetroFuturaGradle) — the
-  underlying 1.7.10 Gradle development plugin and task documentation.
-- [GTNH Actions Workflows](https://github.com/GTNewHorizons/GTNH-Actions-Workflows)
-  — reusable GitHub Actions workflows referenced by many repositories.
-- [MergeMasterXXL](https://github.com/GTNewHorizons/MergeMasterXXL) — automation
-  used to assemble and tag coordinated mod changes.
-- [DreamAssemblerXXL daily build workflow](https://github.com/GTNewHorizons/DreamAssemblerXXL/actions/workflows/daily-modpack-build.yml)
-  — manually start and monitor a daily modpack build.
-- [GTNH Maven repository](https://nexus.gtnewhorizons.com/) — artifact service;
-  use dependency coordinates from the target repository rather than inventing
-  them.
+For project ownership and build tooling links, use the
+[repository directory](/gtnh-developer-handbook/reference/repository-directory/).
+For support status, use [mod support](/gtnh-developer-handbook/reference/mod-support/).
 
 ## External tool documentation
 

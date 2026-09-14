@@ -22,16 +22,6 @@ For a balance-affecting change, read the current required questions, label, and
 approval rules in the contribution guidelines. Do not mix unrelated cleanup into
 the same pull request.
 
-## Prepare reviewable evidence
-
-- Explain what changes, why it changes, and which part of the pack it affects.
-- Write the pull request title with changelog readers in mind.
-- Link prior discussion and dependent pull requests.
-- Add screenshots or video when behavior is visual.
-- Include a flowchart for a new recipe chain, as required by the current
-  contribution guidelines.
-- State exactly how the change was tested.
-
 ## Follow the AI usage policy
 
 GTNH has a separate
@@ -42,4 +32,5 @@ personally review and edit assisted text, and write commit messages and pull
 request descriptions in their own voice. Read the source policy before using AI
 in a contribution; this summary is not a substitute for it.
 
-Next, [find the repository that owns the change](/gtnh-developer-handbook/how-to/change-location/).
+Next, [choose the contribution type](/gtnh-developer-handbook/contributing/contribution-types/)
+and [find the repository that owns the change](/gtnh-developer-handbook/how-to/find-change-location/).

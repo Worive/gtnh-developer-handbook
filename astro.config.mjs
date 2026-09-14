@@ -8,6 +8,21 @@ export default defineConfig({
   redirects: {
     '/how-to/run-daily-build':
       '/gtnh-developer-handbook/maintainers/run-daily-build',
+    '/start-here/setup':
+      '/gtnh-developer-handbook/start-here/fork-clone-and-import',
+    '/start-here/build-and-first-pr':
+      '/gtnh-developer-handbook/start-here/build-and-run',
+    '/how-to/change-location':
+      '/gtnh-developer-handbook/how-to/find-change-location',
+    '/how-to/logs': '/gtnh-developer-handbook/how-to/locate-logs',
+    '/how-to/maven-local':
+      '/gtnh-developer-handbook/how-to/test-cross-repository-changes',
+    '/maintainers/tag-mod-version':
+      '/gtnh-developer-handbook/maintainers/release-operations',
+    '/troubleshooting/common-problems':
+      '/gtnh-developer-handbook/troubleshooting/gradle',
+    '/reference/resources':
+      '/gtnh-developer-handbook/reference/official-resources',
   },
   integrations: [
     starlight({
@@ -35,20 +50,31 @@ export default defineConfig({
           label: 'Start Here',
           items: [
             { slug: 'start-here/prerequisites' },
-            { slug: 'start-here/setup' },
-            { slug: 'start-here/build-and-first-pr' },
+            { slug: 'start-here/choose-a-repository' },
+            { slug: 'start-here/fork-clone-and-import' },
+            { slug: 'start-here/build-and-run' },
+            { slug: 'start-here/first-pull-request' },
           ],
         },
         {
           label: 'Contributing',
-          items: [{ slug: 'contributing/before-you-code' }],
+          items: [
+            { slug: 'contributing/before-you-code' },
+            { slug: 'contributing/contribution-types' },
+            { slug: 'contributing/pull-request-expectations' },
+            { slug: 'contributing/testing-expectations' },
+            { slug: 'contributing/review-and-ci' },
+          ],
         },
         {
           label: 'How-to Guides',
           items: [
-            { slug: 'how-to/change-location' },
+            { slug: 'how-to/find-change-location' },
             { slug: 'how-to/gradle-tasks' },
-            { slug: 'how-to/logs' },
+            { slug: 'how-to/local-gradle-overrides' },
+            { slug: 'how-to/test-cross-repository-changes' },
+            { slug: 'how-to/locate-logs' },
+            { slug: 'how-to/use-horizon-qa' },
           ],
         },
         {
@@ -56,6 +82,8 @@ export default defineConfig({
           items: [
             { slug: 'concepts/repository-map' },
             { slug: 'concepts/build-system-stack' },
+            { slug: 'concepts/java-and-runtime-model' },
+            { slug: 'concepts/dependencies-and-artifacts' },
             { slug: 'concepts/release-pipeline' },
           ],
         },
@@ -63,18 +91,29 @@ export default defineConfig({
           label: 'Maintainer Procedures',
           items: [
             { slug: 'maintainers/run-daily-build' },
-            { slug: 'maintainers/tag-mod-version' },
+            { slug: 'maintainers/run-experimental-build' },
+            { slug: 'maintainers/release-operations' },
+            { slug: 'maintainers/repair-maven-metadata' },
           ],
         },
         {
           label: 'Troubleshooting',
-          items: [{ slug: 'troubleshooting/common-problems' }],
+          items: [
+            { slug: 'troubleshooting/java' },
+            { slug: 'troubleshooting/gradle' },
+            { slug: 'troubleshooting/development-client' },
+            { slug: 'troubleshooting/intellij' },
+            { slug: 'troubleshooting/ci' },
+            { slug: 'troubleshooting/mixins-and-transformers' },
+          ],
         },
         {
           label: 'Reference',
           items: [
             { slug: 'reference/glossary' },
-            { slug: 'reference/resources' },
+            { slug: 'reference/official-resources' },
+            { slug: 'reference/repository-directory' },
+            { slug: 'reference/mod-support' },
           ],
         },
       ],

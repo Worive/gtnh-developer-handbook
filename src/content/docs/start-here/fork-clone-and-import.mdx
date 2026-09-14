@@ -2,7 +2,7 @@
 title: Fork, clone, and import
 description: Create your working copy and let IntelliJ import the Gradle model.
 sidebar:
-  order: 2
+  order: 3
 ---
 
 import { FileTree, Steps } from '@astrojs/starlight/components';
@@ -15,6 +15,10 @@ import { FileTree, Steps } from '@astrojs/starlight/components';
    [forking guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
    describes the current UI and upstream setup.
 
+   When GitHub offers **Copy the master branch only**, leave it unchecked. The
+   GTNH build derives mod versions from Git tags; a fork without tags may fall
+   back to a commit hash and fail another mod's minimum-version check.
+
 2. **Clone your fork.**
 
    Copy the HTTPS URL from your fork's **Code** menu, then run:
@@ -23,6 +27,10 @@ import { FileTree, Steps } from '@astrojs/starlight/components';
    git clone https://github.com/YOUR-USER/REPOSITORY.git
    cd REPOSITORY
    ```
+
+   For a repository with a very large history, such as GT5-Unofficial, use
+   `git clone --filter=blob:none URL` to fetch old file contents only when they
+   are needed.
 
    **Expected result:** the new directory contains the repository's tracked
    files and `git status` reports a clean working tree.
@@ -79,5 +87,5 @@ The current [ExampleMod file list](https://github.com/GTNewHorizons/ExampleMod1.
 is a useful example of this layout, not a promise that every repository matches it.
 
 If synchronization fails, use the
-[Gradle import checklist](/gtnh-developer-handbook/troubleshooting/common-problems/#gradle-import-or-dependency-failures).
-Otherwise, continue to [build, run, and prepare a first pull request](/gtnh-developer-handbook/start-here/build-and-first-pr/).
+[Gradle troubleshooting guide](/gtnh-developer-handbook/troubleshooting/gradle/).
+Otherwise, continue to [build and run the project](/gtnh-developer-handbook/start-here/build-and-run/).

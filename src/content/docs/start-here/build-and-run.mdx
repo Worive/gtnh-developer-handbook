@@ -1,11 +1,11 @@
 ---
-title: Build, run, and make a first pull request
-description: Discover repository tasks, run the relevant checks, and submit a focused change.
+title: Build and run
+description: Discover repository tasks, build the project, and run a development client.
 sidebar:
-  order: 3
+  order: 4
 ---
 
-import { Steps, TabItem, Tabs } from '@astrojs/starlight/components';
+import { TabItem, Tabs } from '@astrojs/starlight/components';
 
 ## Discover tasks before running them
 
@@ -51,44 +51,24 @@ GTNHGradle-based mod repositories. Its registration is visible in the current
 [GTNHGradle IDE integration source](https://github.com/GTNewHorizons/GTNHGradle/blob/master/src/main/java/com/gtnewhorizons/gtnhgradle/modules/IdeIntegrationModule.java).
 Do not assume it exists in pack, tooling, or older mod repositories.
 
+If IntelliJ provides a **Hotswap** client configuration, use it in debug mode
+for quick iteration. After recompiling, choose **Run → Debugging Actions →
+Reload Changed Classes** to apply supported changes without restarting the game.
+Select the run configuration matching the JDK you need to test.
+
 **Expected result:** a successful build ends with `BUILD SUCCESSFUL`; a run task
 starts a development client or prints a specific failure to the terminal and its
-log. See [Locating logs](/gtnh-developer-handbook/how-to/logs/) when startup fails.
+log. See [Locate logs](/gtnh-developer-handbook/how-to/locate-logs/) when startup fails.
 
-## Prepare a focused pull request
+## Test integration-sensitive changes in the full pack
 
-<Steps>
+After the development client passes, build the mod and find its jar in
+`build/libs`. Choose the jar without a classifier; `-dirty` may be present when
+the working tree has uncommitted changes. Import the latest
+[GTNH development build](https://wiki.gtnewhorizons.com/wiki/Dev_Builds) into a
+separate launcher instance, replace the packaged mod with that jar, and repeat
+the relevant test there. This matters most when the change can interact with
+other mods; isolated development runs do not exercise the full pack.
 
-1. Create a local branch with a short descriptive name unless the repository
-   documents a required convention.
-
-   ```console
-   git switch -c describe-the-change
-   ```
-
-2. Make one coherent change. Keep generated run directories, IDE state, build
-   output, and secrets out of the commit.
-
-3. Review `git diff`, then run the same relevant tasks you found in the README
-   and `.github/workflows/`.
-
-4. Commit and push the branch to your fork:
-
-   ```console
-   git add PATHS-YOU-REVIEWED
-   git commit -m "Describe the change"
-   git push -u origin describe-the-change
-   ```
-
-   **Expected result:** Git prints the pushed branch URL and the working tree is
-   clean after the commit.
-
-5. Open a pull request against the base repository and branch requested by that
-   repository. Explain the problem, the change, and how you verified it. Link the
-   relevant issue rather than claiming an undocumented policy.
-
-</Steps>
-
-GitHub's [pull request guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
-covers the current fork-to-PR interface. If results differ between your machine
-and Actions, use the [local-versus-CI checklist](/gtnh-developer-handbook/troubleshooting/common-problems/#local-and-ci-disagree).
+When the project builds and the relevant behavior works, continue to
+[your first pull request](/gtnh-developer-handbook/start-here/first-pull-request/).
