@@ -1,0 +1,54 @@
+---
+title: GTNH Developer Handbook
+description: Unofficial documentation for GTNH contributors
+template: splash
+hero:
+  title: GTNH Developer Handbook
+  tagline: Unofficial documentation for GTNH contributors
+  actions:
+    - text: Set up your environment
+      link: /gtnh-developer-handbook/start-here/prerequisites/
+      icon: right-arrow
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+> **This is an unofficial, community-maintained draft for GTNH developers. It is
+> not endorsed by the GTNH team. Instructions may be incomplete or outdated;
+> verify important details against the relevant repository.**
+
+This handbook is for people changing GTNH repositories: mod developers, build
+maintainers, reviewers, and first-time contributors. It is not player
+documentation and does not replace the
+[official GTNH wiki](https://wiki.gtnewhorizons.com/).
+
+The content is an early draft. Each technical page points back to current
+repository files or upstream documentation so you can verify anything that may
+have changed.
+
+<CardGrid>
+  <LinkCard
+    title="Start Here"
+    href="./start-here/prerequisites/"
+    description="Choose a repository, prepare its toolchain, and make a first pull request."
+  />
+  <LinkCard
+    title="How-to Guides"
+    href="./how-to/change-location/"
+    description="Find the right code, inspect Gradle tasks, and gather useful logs."
+  />
+  <LinkCard
+    title="Troubleshooting"
+    href="./troubleshooting/common-problems/"
+    description="Diagnose Java, Gradle, client startup, IntelliJ, and CI differences."
+  />
+  <LinkCard
+    title="Reference"
+    href="./reference/glossary/"
+    description="Look up GTNH development terms and authoritative resources."
+  />
+</CardGrid>
+
+Start from the [GTNewHorizons GitHub organization](https://github.com/GTNewHorizons)
+when you need code, issues, or repository-specific instructions. Use the
+[official wiki](https://wiki.gtnewhorizons.com/) for player-facing information.

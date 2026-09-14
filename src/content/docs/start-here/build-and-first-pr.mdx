@@ -1,0 +1,95 @@
+---
+title: Build, run, and make a first pull request
+description: Discover repository tasks, run the relevant checks, and submit a focused change.
+sidebar:
+  order: 3
+  badge: Draft
+---
+
+import { Steps, TabItem, Tabs } from '@astrojs/starlight/components';
+
+:::caution[Draft]
+Task names vary. Run only tasks exposed by the selected repository and follow its
+README and CI workflow when they differ from this page.
+:::
+
+## Discover tasks before running them
+
+<Tabs syncKey="operating-system">
+  <TabItem label="Linux or macOS">
+
+```console
+./gradlew tasks --all
+```
+
+  </TabItem>
+  <TabItem label="Windows">
+
+```console
+gradlew.bat tasks --all
+```
+
+  </TabItem>
+</Tabs>
+
+**Expected result:** Gradle prints the tasks available in this checkout. This
+command has been checked against the current
+[ExampleMod1.7.10 repository](https://github.com/GTNewHorizons/ExampleMod1.7.10).
+If it fails before listing tasks, stop and diagnose the wrapper or dependency
+error instead of guessing another task name.
+
+Read [Working with Gradle tasks](/gtnh-developer-handbook/how-to/gradle-tasks/) before using an
+unfamiliar task.
+
+## Build and run
+
+If `build` appears and the repository README or CI uses it, run it through the
+wrapper. The current [GT5-Unofficial contribution notes](https://github.com/GTNewHorizons/GT5-Unofficial#contribution)
+are one repository-specific example that recommends building before IDE import.
+
+If `runClient` appears, it is the usual development-client entry point in
+GTNHGradle-based mod repositories. Its registration is visible in the current
+[GTNHGradle IDE integration source](https://github.com/GTNewHorizons/GTNHGradle/blob/master/src/main/java/com/gtnewhorizons/gtnhgradle/modules/IdeIntegrationModule.java).
+Do not assume it exists in pack, tooling, or older mod repositories.
+
+**Expected result:** a successful build ends with `BUILD SUCCESSFUL`; a run task
+starts a development client or prints a specific failure to the terminal and its
+log. See [Locating logs](/gtnh-developer-handbook/how-to/logs/) when startup fails.
+
+## Prepare a focused pull request
+
+<Steps>
+
+1. Create a local branch with a short descriptive name unless the repository
+   documents a required convention.
+
+   ```console
+   git switch -c describe-the-change
+   ```
+
+2. Make one coherent change. Keep generated run directories, IDE state, build
+   output, and secrets out of the commit.
+
+3. Review `git diff`, then run the same relevant tasks you found in the README
+   and `.github/workflows/`.
+
+4. Commit and push the branch to your fork:
+
+   ```console
+   git add PATHS-YOU-REVIEWED
+   git commit -m "Describe the change"
+   git push -u origin describe-the-change
+   ```
+
+   **Expected result:** Git prints the pushed branch URL and the working tree is
+   clean after the commit.
+
+5. Open a pull request against the base repository and branch requested by that
+   repository. Explain the problem, the change, and how you verified it. Link the
+   relevant issue rather than claiming an undocumented policy.
+
+</Steps>
+
+GitHub's [pull request guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+covers the current fork-to-PR interface. If results differ between your machine
+and Actions, use the [local-versus-CI checklist](/gtnh-developer-handbook/troubleshooting/common-problems/#local-and-ci-disagree).
