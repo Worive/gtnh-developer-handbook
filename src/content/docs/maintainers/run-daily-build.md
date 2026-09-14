@@ -2,7 +2,7 @@
 title: Run a daily modpack build manually
 description: Start and monitor the current GTNH daily build workflow.
 sidebar:
-  order: 4
+  order: 1
 ---
 
 The current
@@ -43,3 +43,6 @@ If it fails, open the first failed job and preserve its log link before asking
 for help. Check whether another daily build was already running before
 restarting: the workflow is configured to cancel an in-progress run when a new
 run starts.
+
+To understand which mod releases feed the build, see
+[How changes reach a modpack build](/gtnh-developer-handbook/concepts/release-pipeline/).

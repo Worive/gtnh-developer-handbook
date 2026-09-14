@@ -5,6 +5,10 @@ import starlightThemeNova from 'starlight-theme-nova';
 export default defineConfig({
   site: 'https://worive.github.io',
   base: '/gtnh-developer-handbook',
+  redirects: {
+    '/how-to/run-daily-build':
+      '/gtnh-developer-handbook/maintainers/run-daily-build',
+  },
   integrations: [
     starlight({
       title: 'GTNH Developer Handbook',
@@ -36,12 +40,30 @@ export default defineConfig({
           ],
         },
         {
+          label: 'Contributing',
+          items: [{ slug: 'contributing/before-you-code' }],
+        },
+        {
           label: 'How-to Guides',
           items: [
             { slug: 'how-to/change-location' },
             { slug: 'how-to/gradle-tasks' },
             { slug: 'how-to/logs' },
-            { slug: 'how-to/run-daily-build' },
+          ],
+        },
+        {
+          label: 'Concepts',
+          items: [
+            { slug: 'concepts/repository-map' },
+            { slug: 'concepts/build-system-stack' },
+            { slug: 'concepts/release-pipeline' },
+          ],
+        },
+        {
+          label: 'Maintainer Procedures',
+          items: [
+            { slug: 'maintainers/run-daily-build' },
+            { slug: 'maintainers/tag-mod-version' },
           ],
         },
         {
