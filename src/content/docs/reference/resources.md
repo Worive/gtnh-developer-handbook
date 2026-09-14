@@ -3,7 +3,6 @@ title: Official resources and repositories
 description: Authoritative starting points for GTNH development facts and support.
 sidebar:
   order: 2
-  badge: Draft
 ---
 
 :::caution[Draft]

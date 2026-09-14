@@ -3,7 +3,6 @@ title: Locate logs and useful errors
 description: Capture the first actionable failure from Gradle, IntelliJ, or a development client.
 sidebar:
   order: 3
-  badge: Draft
 ---
 
 :::caution[Draft]

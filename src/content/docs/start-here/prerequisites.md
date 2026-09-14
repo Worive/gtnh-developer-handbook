@@ -3,7 +3,6 @@ title: Prerequisites and repository choice
 description: Check a GTNH repository's own requirements before installing tools.
 sidebar:
   order: 1
-  badge: Draft
 ---
 
 :::caution[Draft]

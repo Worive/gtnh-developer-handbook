@@ -3,7 +3,6 @@ title: Common development problems
 description: Short diagnostic checklists for Java, Gradle, client startup, IntelliJ, and CI.
 sidebar:
   order: 1
-  badge: Draft
 ---
 
 :::caution[Draft]

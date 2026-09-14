@@ -3,7 +3,6 @@ title: GTNH development glossary
 description: Concise definitions for terms encountered while contributing to GTNH repositories.
 sidebar:
   order: 1
-  badge: Draft
 ---
 
 :::caution[Draft]

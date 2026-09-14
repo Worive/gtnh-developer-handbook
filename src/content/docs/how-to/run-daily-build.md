@@ -3,7 +3,6 @@ title: Run a daily modpack build manually
 description: Start and monitor the current GTNH daily build workflow.
 sidebar:
   order: 4
-  badge: Draft
 ---
 
 :::caution[Draft]
