@@ -61,6 +61,15 @@ in the repository root.
   [GTNHGradle README](https://github.com/GTNewHorizons/GTNHGradle#disabling-modules)
   documents it as the property reference.
 
+## Use local overrides
+
+Prefer a property listed by `propertiesHelp` over editing build logic. Some
+GTNHGradle projects also support ignored `addon.local.gradle` and
+`addon.late.local.gradle` files for machine-specific configuration; confirm the
+mechanism in that repository or the
+[ExampleMod advanced guidance](https://github.com/GTNewHorizons/ExampleMod1.7.10#advanced).
+Keep personal run arguments and paths out of committed build files.
+
 For more diagnostic output, rerun the known task with `--stacktrace`. Add
 `--info` only when the normal output does not identify the failing step; it can
 be noisy. Gradle documents both in its

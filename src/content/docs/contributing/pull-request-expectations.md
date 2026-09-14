@@ -17,3 +17,7 @@ sidebar:
 
 Do not mix drive-by cleanup with the requested change; it makes review and
 rollback harder.
+
+Maintainers may temporarily include a pull request in a development build for
+broader testing. This is case-by-case, and the author remains responsible for
+investigating problems found there.

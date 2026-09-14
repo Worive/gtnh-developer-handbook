@@ -23,6 +23,16 @@ export default defineConfig({
       '/gtnh-developer-handbook/troubleshooting/gradle',
     '/reference/resources':
       '/gtnh-developer-handbook/reference/official-resources',
+    '/contributing/contribution-types':
+      '/gtnh-developer-handbook/concepts/repository-map',
+    '/contributing/review-and-ci':
+      '/gtnh-developer-handbook/contributing/pull-request-expectations',
+    '/how-to/local-gradle-overrides':
+      '/gtnh-developer-handbook/how-to/gradle-tasks#use-local-overrides',
+    '/reference/repository-directory':
+      '/gtnh-developer-handbook/concepts/repository-map',
+    '/reference/mod-support':
+      '/gtnh-developer-handbook/concepts/repository-map#separate-ownership-from-support',
   },
   integrations: [
     starlight({
@@ -60,10 +70,8 @@ export default defineConfig({
           label: 'Contributing',
           items: [
             { slug: 'contributing/before-you-code' },
-            { slug: 'contributing/contribution-types' },
             { slug: 'contributing/pull-request-expectations' },
             { slug: 'contributing/testing-expectations' },
-            { slug: 'contributing/review-and-ci' },
           ],
         },
         {
@@ -71,7 +79,6 @@ export default defineConfig({
           items: [
             { slug: 'how-to/find-change-location' },
             { slug: 'how-to/gradle-tasks' },
-            { slug: 'how-to/local-gradle-overrides' },
             { slug: 'how-to/test-cross-repository-changes' },
             { slug: 'how-to/locate-logs' },
             { slug: 'how-to/use-horizon-qa' },
@@ -112,8 +119,6 @@ export default defineConfig({
           items: [
             { slug: 'reference/glossary' },
             { slug: 'reference/official-resources' },
-            { slug: 'reference/repository-directory' },
-            { slug: 'reference/mod-support' },
           ],
         },
       ],

@@ -33,7 +33,7 @@ GTNHGradle project, the documented `propertiesHelp` task lists available
 properties and their descriptions.
 
 For repository-supported local customization, see
-[Use local Gradle overrides](/gtnh-developer-handbook/how-to/local-gradle-overrides/).
+[Work with Gradle tasks](/gtnh-developer-handbook/how-to/gradle-tasks/#use-local-overrides).
 
 If a build migration or updater rewrites files, review the resulting diff as
 code. Generated output is not evidence that the migration understood every

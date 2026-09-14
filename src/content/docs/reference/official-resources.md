@@ -22,9 +22,8 @@ sidebar:
   and [contribution guidelines](https://github.com/GTNewHorizons/.github/blob/master/CONTRIBUTING.md)
   — read the current files before submitting changes.
 
-For project ownership and build tooling links, use the
-[repository directory](/gtnh-developer-handbook/reference/repository-directory/).
-For support status, use [mod support](/gtnh-developer-handbook/reference/mod-support/).
+For project ownership, build tooling, and mod support, use the
+[repository map](/gtnh-developer-handbook/concepts/repository-map/).
 
 ## External tool documentation
 

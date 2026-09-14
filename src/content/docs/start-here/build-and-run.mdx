@@ -5,40 +5,16 @@ sidebar:
   order: 4
 ---
 
-import { TabItem, Tabs } from '@astrojs/starlight/components';
-
 ## Discover tasks before running them
-
-:::note[Repository-specific]
-Task names vary. Run only tasks exposed by the selected repository and follow its
-README and CI workflow when they differ from this page.
-:::
-
-<Tabs syncKey="operating-system">
-  <TabItem label="Linux or macOS">
 
 ```console
 ./gradlew tasks --all
 ```
 
-  </TabItem>
-  <TabItem label="Windows">
-
-```console
-gradlew.bat tasks --all
-```
-
-  </TabItem>
-</Tabs>
-
-**Expected result:** Gradle prints the tasks available in this checkout. This
-command has been checked against the current
-[ExampleMod1.7.10 repository](https://github.com/GTNewHorizons/ExampleMod1.7.10).
-If it fails before listing tasks, stop and diagnose the wrapper or dependency
-error instead of guessing another task name.
-
-Read [Working with Gradle tasks](/gtnh-developer-handbook/how-to/gradle-tasks/) before using an
-unfamiliar task.
+On Windows, use `gradlew.bat tasks --all`. Task names vary, so follow the
+repository README and CI workflow. See
+[Work with Gradle tasks](/gtnh-developer-handbook/how-to/gradle-tasks/) before
+using an unfamiliar task.
 
 ## Build and run
 

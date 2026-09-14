@@ -32,5 +32,4 @@ personally review and edit assisted text, and write commit messages and pull
 request descriptions in their own voice. Read the source policy before using AI
 in a contribution; this summary is not a substitute for it.
 
-Next, [choose the contribution type](/gtnh-developer-handbook/contributing/contribution-types/)
-and [find the repository that owns the change](/gtnh-developer-handbook/how-to/find-change-location/).
+Next, [find the repository that owns the change](/gtnh-developer-handbook/how-to/find-change-location/).
