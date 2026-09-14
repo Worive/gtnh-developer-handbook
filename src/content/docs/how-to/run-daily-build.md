@@ -35,9 +35,9 @@ restriction.
 
 ## Monitor the run
 
-Open the new run and follow its jobs. On success, check the
-[GTNH Daily Builds releases](https://github.com/GTNewHorizons/GTNH-Daily-Builds/releases)
-for the published output.
+Open the new run and follow its jobs. After a successful run, the build artifacts
+are published as a release in
+[GTNH Daily Builds](https://github.com/GTNewHorizons/GTNH-Daily-Builds/releases).
 
 If it fails, open the first failed job and preserve its log link before asking
 for help. Check whether another daily build was already running before
