@@ -5,10 +5,8 @@ sidebar:
   order: 1
 ---
 
-:::caution[Draft]
 Terms describe current development concepts, not GTNH policy. Follow the linked
 project documentation for precise behavior.
-:::
 
 ## Build and source terms
 

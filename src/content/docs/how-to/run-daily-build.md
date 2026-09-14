@@ -5,11 +5,9 @@ sidebar:
   order: 4
 ---
 
-:::caution[Draft]
 This is a maintainer operation that can publish a daily release and update
 repository data. Run it only when you are authorized and a manual build is
 needed.
-:::
 
 The current
 [Daily modpack build workflow](https://github.com/GTNewHorizons/DreamAssemblerXXL/actions/workflows/daily-modpack-build.yml)

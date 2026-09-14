@@ -5,10 +5,8 @@ sidebar:
   order: 1
 ---
 
-:::caution[Draft]
 This is a search workflow, not an ownership policy. Confirm the result with the
 target repository's maintainers when a change crosses project boundaries.
-:::
 
 ## Start from evidence
 

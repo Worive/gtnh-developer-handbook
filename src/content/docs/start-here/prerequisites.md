@@ -5,10 +5,8 @@ sidebar:
   order: 1
 ---
 
-:::caution[Draft]
 Verify requirements in the repository you intend to change. GTNH repositories
 do not all use the same toolchain or Gradle tasks.
-:::
 
 ## Choose the repository first
 

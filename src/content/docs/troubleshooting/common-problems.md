@@ -5,10 +5,8 @@ sidebar:
   order: 1
 ---
 
-:::caution[Draft]
 These checks deliberately avoid a universal Java version or task name. The
 selected repository's current files and workflow are authoritative.
-:::
 
 ## Wrong Java version
 

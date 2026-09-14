@@ -5,10 +5,8 @@ sidebar:
   order: 3
 ---
 
-:::caution[Draft]
 Log directories and run configurations vary by repository. Use paths printed by
 the current task instead of assuming one layout applies everywhere.
-:::
 
 ## Start where the failure occurred
 

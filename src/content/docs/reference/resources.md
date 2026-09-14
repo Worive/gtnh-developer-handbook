@@ -5,10 +5,8 @@ sidebar:
   order: 2
 ---
 
-:::caution[Draft]
 This is a curated starting list, not a complete map of the GTNH organization.
 Repository-local instructions remain authoritative for that repository.
-:::
 
 ## GTNH entry points
 
