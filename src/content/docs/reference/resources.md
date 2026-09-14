@@ -38,6 +38,8 @@ Repository-local instructions remain authoritative for that repository.
   underlying 1.7.10 Gradle development plugin and task documentation.
 - [GTNH Actions Workflows](https://github.com/GTNewHorizons/GTNH-Actions-Workflows)
   — reusable GitHub Actions workflows referenced by many repositories.
+- [DreamAssemblerXXL daily build workflow](https://github.com/GTNewHorizons/DreamAssemblerXXL/actions/workflows/daily-modpack-build.yml)
+  — manually start and monitor a daily modpack build.
 - [GTNH Maven repository](https://nexus.gtnewhorizons.com/) — artifact service;
   use dependency coordinates from the target repository rather than inventing
   them.

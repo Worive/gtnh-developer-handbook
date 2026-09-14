@@ -41,6 +41,7 @@ export default defineConfig({
             { slug: 'how-to/change-location' },
             { slug: 'how-to/gradle-tasks' },
             { slug: 'how-to/logs' },
+            { slug: 'how-to/run-daily-build' },
           ],
         },
         {
