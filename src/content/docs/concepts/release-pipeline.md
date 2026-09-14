@@ -25,6 +25,33 @@ actually available.
 6. The daily workflow assembles and publishes downloadable output in
    [GTNH Daily Builds](https://github.com/GTNewHorizons/GTNH-Daily-Builds/releases).
 
+## Read a pack version
+
+In version `2.9.0`, each position has a different meaning:
+
+- `2` is the run generation. When this number changes, start a new playthrough.
+- `9` is the major release number. Major releases contain substantial changes.
+  The current expected pace is about one per year, but this is not a guarantee.
+- `0` is the maintenance release number. These releases primarily contain fixes,
+  but may also include features or other non-bug changes.
+
+After `2.9.0`, maintenance releases are numbered `2.9.1`, `2.9.2`, and so on.
+
+## Follow a major release lifecycle
+
+A major release normally progresses through beta versions, release candidates,
+and then a stable version:
+
+`2.9.0-beta-1` → `2.9.0-beta-2` → `2.9.0-rc-1` → `2.9.0`
+
+There may be several beta rounds while changes and migration problems are
+resolved. Once a beta is considered release-ready, it becomes a release
+candidate. Ideally only one release candidate is needed. Another can be
+published if testing finds a release blocker.
+
+The current naming history is visible in the
+[modpack releases](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/releases).
+
 ## Verify each boundary
 
 For a change expected in a daily build, record:
