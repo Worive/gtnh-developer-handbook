@@ -17,7 +17,7 @@ Run `npm run build` before opening a pull request. Documentation lives in
 `src/content/docs/`; edit or add Markdown/MDX there and use the existing concise,
 task-oriented style.
 
-The `main` branch deploys with GitHub Actions to
+The `master` branch deploys with GitHub Actions to
 <https://worive.github.io/gtnh-developer-handbook/>.
 
 ## License

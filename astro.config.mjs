@@ -40,7 +40,7 @@ export default defineConfig({
       description: 'Unofficial documentation for GTNH contributors',
       plugins: [starlightThemeNova()],
       editLink: {
-        baseUrl: 'https://github.com/Worive/gtnh-developer-handbook/edit/main/',
+        baseUrl: 'https://github.com/Worive/gtnh-developer-handbook/edit/master/',
       },
       social: [
         {
