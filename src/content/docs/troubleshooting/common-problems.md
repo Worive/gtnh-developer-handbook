@@ -5,9 +5,6 @@ sidebar:
   order: 1
 ---
 
-These checks deliberately avoid a universal Java version or task name. The
-selected repository's current files and workflow are authoritative.
-
 ## Wrong Java version
 
 **Signs:** Gradle refuses to start, reports an unsupported class-file version,

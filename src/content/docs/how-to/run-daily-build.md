@@ -5,10 +5,6 @@ sidebar:
   order: 4
 ---
 
-This is a maintainer operation that can publish a daily release and update
-repository data. Run it only when you are authorized and a manual build is
-needed.
-
 The current
 [Daily modpack build workflow](https://github.com/GTNewHorizons/DreamAssemblerXXL/actions/workflows/daily-modpack-build.yml)
 in DreamAssemblerXXL supports manual runs. Its
@@ -16,6 +12,11 @@ in DreamAssemblerXXL supports manual runs. Its
 is the authoritative source for its trigger, branch, and behavior.
 
 ## Start the build
+
+:::caution[Maintainer operation]
+This workflow can publish a daily release and update repository data. Run it
+only when you are authorized and a manual build is needed.
+:::
 
 1. Open the [DreamAssemblerXXL Actions page](https://github.com/GTNewHorizons/DreamAssemblerXXL/actions).
 2. Select **Daily modpack build** in the left sidebar.

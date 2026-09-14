@@ -5,9 +5,6 @@ sidebar:
   order: 2
 ---
 
-This is a curated starting list, not a complete map of the GTNH organization.
-Repository-local instructions remain authoritative for that repository.
-
 ## GTNH entry points
 
 - [GTNewHorizons GitHub organization](https://github.com/GTNewHorizons) — source

@@ -5,9 +5,6 @@ sidebar:
   order: 1
 ---
 
-Verify requirements in the repository you intend to change. GTNH repositories
-do not all use the same toolchain or Gradle tasks.
-
 ## Choose the repository first
 
 Start with the issue, feature, or broken behavior—not a familiar repository
