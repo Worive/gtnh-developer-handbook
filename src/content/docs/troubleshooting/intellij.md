@@ -13,8 +13,7 @@ generated sources are missing, or navigation stops working.
 3. Reload the Gradle project so source sets and generated directories come from
    the build model.
 4. Check whether generation is performed by a documented Gradle task.
-5. Use IntelliJ cache invalidation only after the model and Gradle build are
-   correct; it cannot fix a broken model.
+5. Invalidate IntelliJ caches only after confirming the Gradle model and build.
 
 For older repositories that expose `setupDecompWorkspace`, the
 [Development wiki](https://wiki.gtnewhorizons.com/wiki/Development#Common_Issues)

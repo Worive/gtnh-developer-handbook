@@ -11,40 +11,38 @@ sidebar:
 ./gradlew tasks --all
 ```
 
-On Windows, use `gradlew.bat tasks --all`. Task names vary, so follow the
-repository README and CI workflow. See
+On Windows, use `gradlew.bat tasks --all`. Follow the repository README and CI
+workflow because task names vary. See
 [Work with Gradle tasks](/gtnh-developer-handbook/how-to/gradle-tasks/) before
 using an unfamiliar task.
 
 ## Build and run
 
-If `build` appears and the repository README or CI uses it, run it through the
-wrapper. The current [GT5-Unofficial contribution notes](https://github.com/GTNewHorizons/GT5-Unofficial#contribution)
-are one repository-specific example that recommends building before IDE import.
+Run `build` through the wrapper when the task exists and the README or CI uses
+it. [GT5-Unofficial](https://github.com/GTNewHorizons/GT5-Unofficial#contribution),
+for example, recommends building before IDE import.
 
-If `runClient` appears, it is the usual development-client entry point in
-GTNHGradle-based mod repositories. Its registration is visible in the current
+`runClient` is the usual client entry point in GTNHGradle mod repositories. Its
+registration is visible in
 [GTNHGradle IDE integration source](https://github.com/GTNewHorizons/GTNHGradle/blob/master/src/main/java/com/gtnewhorizons/gtnhgradle/modules/IdeIntegrationModule.java).
-Do not assume it exists in pack, tooling, or older mod repositories.
+It may be absent from pack, tooling, or older repositories.
 
 If IntelliJ provides a **Hotswap** client configuration, use it in debug mode
 for quick iteration. After recompiling, choose **Run → Debugging Actions →
 Reload Changed Classes** to apply supported changes without restarting the game.
 Select the run configuration matching the JDK you need to test.
 
-**Expected result:** a successful build ends with `BUILD SUCCESSFUL`; a run task
-starts a development client or prints a specific failure to the terminal and its
-log. See [Locate logs](/gtnh-developer-handbook/how-to/locate-logs/) when startup fails.
+**Expected result:** a build ends with `BUILD SUCCESSFUL`; a run starts a
+development client. For failures, see
+[Locate logs](/gtnh-developer-handbook/how-to/locate-logs/).
 
 ## Test integration-sensitive changes in the full pack
 
-After the development client passes, build the mod and find its jar in
-`build/libs`. Choose the jar without a classifier; `-dirty` may be present when
-the working tree has uncommitted changes. Import the latest
+After isolated testing, build the mod and select the unclassified jar from
+`build/libs`; `-dirty` may appear for uncommitted changes. Import the latest
 [GTNH development build](https://wiki.gtnewhorizons.com/wiki/Dev_Builds) into a
-separate launcher instance, replace the packaged mod with that jar, and repeat
-the relevant test there. This matters most when the change can interact with
-other mods; isolated development runs do not exercise the full pack.
+separate instance, replace the packaged mod, and repeat the test. This catches
+interactions absent from an isolated development run.
 
 When the project builds and the relevant behavior works, continue to
 [your first pull request](/gtnh-developer-handbook/start-here/first-pull-request/).

@@ -11,9 +11,8 @@ with Nexus administration access, a confirmed damaged `maven-metadata.xml`, and
 the exact affected repository path.
 :::
 
-Nexus provides a **Repair - Rebuild Maven repository metadata
-(maven-metadata.xml)** task. It rebuilds Maven metadata for a selected portion
-of a hosted repository and validates its checksums.
+Nexus's **Repair - Rebuild Maven repository metadata (maven-metadata.xml)** task
+rebuilds a selected hosted-repository scope and its checksums.
 
 ## Use an existing repair task
 
@@ -23,9 +22,8 @@ Three manual tasks already cover the known GTNH convention artifacts:
 - `gtnhconvention`
 - `gtnhsettingsconvention`
 
-Use the matching existing task when its configured scope exactly covers the
-damaged path. Review its repository and filters before running it; do not widen
-the scope just to make the task reusable.
+Use an existing task only when its repository and filters exactly cover the
+damaged path. Do not widen its scope.
 
 ## Create a missing scoped task
 
@@ -39,8 +37,8 @@ the scope just to make the task reusable.
 6. Fetch the affected `maven-metadata.xml` and verify its versions and checksum
    before declaring the incident resolved.
 
-Keep repair tasks manual. If corruption recurs, investigate the publishing or
-storage cause instead of scheduling metadata rebuilds as routine maintenance.
+Keep repair tasks manual. Recurring corruption requires investigation of the
+publishing or storage cause.
 See Sonatype's
 [task reference](https://help.sonatype.com/en/tasks.html#types-of-tasks)
 for the current task behavior and log locations.

@@ -17,14 +17,12 @@ import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 > not endorsed by the GTNH team. Instructions may be incomplete or outdated;
 > verify important details against the relevant repository.**
 
-This handbook is for people changing GTNH repositories: mod developers, build
-maintainers, reviewers, and first-time contributors. It is not player
-documentation and does not replace the
+This handbook is for developers, maintainers, reviewers, and contributors
+changing GTNH repositories. Player documentation belongs on the
 [official GTNH wiki](https://wiki.gtnewhorizons.com/).
 
-The content is an early draft. Each technical page points back to current
-repository files or upstream documentation so you can verify anything that may
-have changed.
+Technical pages link to current repository files or upstream documentation for
+details that may change.
 
 <CardGrid>
   <LinkCard
@@ -36,6 +34,16 @@ have changed.
     title="Contributing"
     href="./contributing/before-you-code/"
     description="Check GTNH expectations before investing time in a change."
+  />
+  <LinkCard
+    title="Development Practices"
+    href="./development-practices/"
+    description="Apply shared GTNH conventions and compatibility practices."
+  />
+  <LinkCard
+    title="Minecraft & Forge Internals"
+    href="./minecraft-forge-internals/client-server-boundaries/"
+    description="Understand the Minecraft 1.7.10 and Forge behavior that matters to GTNH development."
   />
   <LinkCard
     title="How-to Guides"
@@ -64,6 +72,5 @@ have changed.
   />
 </CardGrid>
 
-Start from the [GTNewHorizons GitHub organization](https://github.com/GTNewHorizons)
-when you need code, issues, or repository-specific instructions. Use the
-[official wiki](https://wiki.gtnewhorizons.com/) for player-facing information.
+Use the [GTNewHorizons GitHub organization](https://github.com/GTNewHorizons)
+for code, issues, and repository-specific instructions.

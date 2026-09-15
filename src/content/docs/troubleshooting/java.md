@@ -15,5 +15,4 @@ cannot find a toolchain, or IntelliJ and the terminal behave differently.
    shell.
 4. Point both environments at the repository-required JDK, then reload Gradle.
 
-Do not apply one JDK number to all GTNH repositories. Follow the exact
-repository's checked-in configuration.
+Use the target repository's checked-in JDK configuration.

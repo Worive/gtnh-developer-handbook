@@ -72,6 +72,27 @@ export default defineConfig({
             { slug: 'contributing/before-you-code' },
             { slug: 'contributing/pull-request-expectations' },
             { slug: 'contributing/testing-expectations' },
+            { slug: 'contributing/contribute-to-the-handbook' },
+          ],
+        },
+        {
+          label: 'Development Practices',
+          items: [
+            { slug: 'development-practices' },
+            { slug: 'development-practices/localized-display-text' },
+            { slug: 'development-practices/optional-mod-integrations' },
+          ],
+        },
+        {
+          label: 'Minecraft & Forge Internals',
+          items: [
+            { slug: 'minecraft-forge-internals/client-server-boundaries' },
+            { slug: 'minecraft-forge-internals/tile-entity-state' },
+            { slug: 'minecraft-forge-internals/tick-update-model' },
+            { slug: 'minecraft-forge-internals/nbt-schema' },
+            { slug: 'minecraft-forge-internals/chunk-boundaries' },
+            { slug: 'minecraft-forge-internals/rendering-state' },
+            { slug: 'minecraft-forge-internals/stacks-and-inventories' },
           ],
         },
         {

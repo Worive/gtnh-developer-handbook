@@ -5,9 +5,9 @@ sidebar:
   order: 1
 ---
 
-The current
+The
 [Daily modpack build workflow](https://github.com/GTNewHorizons/DreamAssemblerXXL/actions/workflows/daily-modpack-build.yml)
-in DreamAssemblerXXL supports manual runs. Its
+supports manual runs. Its
 [workflow file](https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/.github/workflows/daily-modpack-build.yml)
 is the authoritative source for its trigger, branch, and behavior.
 
@@ -27,22 +27,17 @@ only when you are authorized and a manual build is needed.
 **Expected result:** a new run appears near the top of the list, initially
 queued or in progress.
 
-GitHub requires repository write access to run a workflow manually. If the
-button is missing, check the
+Manual runs require repository write access. If the button is missing, check
 [GitHub manual-run requirements](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow?tool=webui)
-and ask a DreamAssemblerXXL maintainer rather than trying to work around the
-restriction.
+or ask a DreamAssemblerXXL maintainer.
 
 ## Monitor the run
 
-Open the new run and follow its jobs. After a successful run, the build artifacts
-are published as a release in
+Follow the run's jobs. Successful artifacts appear in
 [GTNH Daily Builds](https://github.com/GTNewHorizons/GTNH-Daily-Builds/releases).
 
-If it fails, open the first failed job and preserve its log link before asking
-for help. Check whether another daily build was already running before
-restarting: the workflow is configured to cancel an in-progress run when a new
-run starts.
+For failures, preserve the first failed job's log. Before restarting, check for
+another daily build: a new run cancels the run already in progress.
 
 To understand which mod releases feed the build, see
 [How changes reach a modpack build](/gtnh-developer-handbook/concepts/release-pipeline/).

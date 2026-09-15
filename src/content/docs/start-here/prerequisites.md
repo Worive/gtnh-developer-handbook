@@ -7,7 +7,7 @@ sidebar:
 
 ## Install only the basics
 
-You normally need:
+Install:
 
 - Git and a GitHub account.
 - A JDK matching the selected repository.
@@ -21,12 +21,11 @@ git --version
 java -version
 ```
 
-**Expected result:** both commands print version information. You will check the
-required Java version after choosing a repository. If Java cannot run, see
+**Expected result:** both commands print versions. Check the required Java
+version after choosing a repository. If Java cannot run, see
 [Troubleshoot Java](/gtnh-developer-handbook/troubleshooting/java/).
 
 ## Before you continue
 
-You should now have Git, a GitHub account, a JDK, and IntelliJ IDEA. Next,
-[choose the repository](/gtnh-developer-handbook/start-here/choose-a-repository/)
-that owns your change.
+[Choose the repository](/gtnh-developer-handbook/start-here/choose-a-repository/)
+that owns the change.

@@ -17,5 +17,5 @@ reverse.
    that depend on time or ordering.
 5. Reproduce the workflow's documented task, not an assumed equivalent.
 
-GTNH mod CI may delegate to a shared workflow. Follow the referenced workflow
-and revision before deciding what CI actually runs.
+If CI delegates to a shared workflow, inspect the referenced workflow and
+revision.

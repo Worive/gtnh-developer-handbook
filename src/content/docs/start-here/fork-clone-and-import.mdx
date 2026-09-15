@@ -11,9 +11,9 @@ import { FileTree, Steps } from '@astrojs/starlight/components';
 
 1. **Fork the repository.**
 
-   Use GitHub's **Fork** button and create the fork under your account. GitHub's
+   Use GitHub's **Fork** button. GitHub's
    [forking guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
-   describes the current UI and upstream setup.
+   describes the UI and upstream setup.
 
    When GitHub offers **Copy the master branch only**, leave it unchecked. The
    GTNH build derives mod versions from Git tags; a fork without tags may fall
@@ -28,12 +28,10 @@ import { FileTree, Steps } from '@astrojs/starlight/components';
    cd REPOSITORY
    ```
 
-   For a repository with a very large history, such as GT5-Unofficial, use
-   `git clone --filter=blob:none URL` to fetch old file contents only when they
-   are needed.
+   For large repositories such as GT5-Unofficial, use
+   `git clone --filter=blob:none URL` to fetch old contents on demand.
 
-   **Expected result:** the new directory contains the repository's tracked
-   files and `git status` reports a clean working tree.
+   **Expected result:** tracked files are present and `git status` is clean.
 
 3. **Confirm the remotes.**
 
@@ -41,30 +39,26 @@ import { FileTree, Steps } from '@astrojs/starlight/components';
    git remote -v
    ```
 
-   `origin` should point to your fork. Add the GTNewHorizons repository as
-   `upstream` if the repository's contribution instructions expect it; use the
-   URL from the original repository, not a copied example.
+   `origin` should point to your fork. Add the original GTNewHorizons repository
+   as `upstream` when its contribution instructions require it.
 
 4. **Import the Gradle project in IntelliJ IDEA.**
 
-   Open the cloned directory. When IntelliJ detects Gradle, choose the checked-in
-   wrapper and the JDK required by the repository. Do not replace the wrapper
-   version or generate a new wrapper merely to make the import succeed. See
+   Open the cloned directory. Choose the checked-in wrapper and the repository's
+   JDK. Do not replace or regenerate the wrapper to fix import. See
    JetBrains' current [Gradle project guide](https://www.jetbrains.com/help/idea/gradle.html)
    for the UI.
 
 5. **Wait for synchronization to finish.**
 
-   **Expected result:** the Gradle tool window lists tasks and the IDE shows no
-   unresolved project-model error. Source indexing can continue after Gradle
-   synchronization has completed.
+   **Expected result:** the Gradle tool window lists tasks with no project-model
+   error. Source indexing may continue afterward.
 
 </Steps>
 
 ## Recognize the important files
 
-A modern GTNH mod repository may resemble this, but every entry is optional
-unless the repository contains it:
+A GTNH mod repository may contain:
 
 <FileTree>
 
@@ -84,7 +78,7 @@ unless the repository contains it:
 </FileTree>
 
 The current [ExampleMod file list](https://github.com/GTNewHorizons/ExampleMod1.7.10)
-is a useful example of this layout, not a promise that every repository matches it.
+shows this layout; individual repositories vary.
 
 If synchronization fails, use the
 [Gradle troubleshooting guide](/gtnh-developer-handbook/troubleshooting/gradle/).

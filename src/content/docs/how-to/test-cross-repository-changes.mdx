@@ -7,18 +7,16 @@ sidebar:
 
 import { Steps, TabItem, Tabs } from '@astrojs/starlight/components';
 
-Use this when a change spans two mod repositories and the dependent mod needs
-to build against an unpublished version of the dependency. This workflow is
-independently summarized from the official
+Use this when one mod must build against an unpublished change from another.
+This workflow follows the official
 [GTNH Maven Local Repository instructions](https://wiki.gtnewhorizons.com/wiki/Development#Maven_Local_Repository).
 
 <Steps>
 
 1. **Publish the modified dependency locally.**
 
-   Choose a temporary version and run `publishToMavenLocal` from the modified
-   dependency mod's root directory. Reuse exactly the same version in the
-   dependent mod. For example:
+   Choose a temporary version, run `publishToMavenLocal` in the dependency mod,
+   and use the same version in the dependent mod:
 
    <Tabs syncKey="operating-system">
      <TabItem label="Linux, macOS, or Git Bash">
@@ -46,8 +44,8 @@ independently summarized from the official
    `NotEnoughItems`.
    :::
 
-   **Expected result:** GTNHGradle reports the version override and Gradle
-   finishes `publishToMavenLocal` successfully. The current
+   **Expected result:** GTNHGradle reports the override and
+   `publishToMavenLocal` succeeds. The
    [GTNHGradle version module](https://github.com/GTNewHorizons/GTNHGradle/blob/master/src/main/java/com/gtnewhorizons/gtnhgradle/modules/GitVersionModule.java)
    reads the uppercase `VERSION` environment variable.
 
@@ -64,23 +62,20 @@ independently summarized from the official
 
 3. **Use the local version in the dependent mod.**
 
-   Add or update the dependency in `dependencies.gradle`, using the same group,
-   artifact, configuration, and classifier that repository normally requires.
-   Set its version to the value published in step 1: `99.99.99` in this example.
-   Do not add a `resolutionStrategy.force` rule.
+   In `dependencies.gradle`, preserve the existing group, artifact,
+   configuration, and classifier. Set its version to `99.99.99`. Do not add a
+   `resolutionStrategy.force` rule.
 
 4. **Refresh and test the dependent mod.**
 
-   Refresh its Gradle model, then run the repository's normal verified build or
-   development-client task. If the dependency changes again, publish it locally
-   again before rebuilding the dependent mod.
+   Refresh Gradle and run the repository's normal build or development-client
+   task. Republish after every dependency change.
 
 </Steps>
 
 :::caution[Local means local]
 GitHub Actions cannot access artifacts from your machine. If `mavenLocal()` was
 added only for this test, remove that addition before opening a pull request.
-Use an online pre-release version when CI must resolve the cross-mod dependency;
-the official GTNH guide recommends asking a GTNH team member when you cannot
-publish that pre-release.
+CI requires an online pre-release. Ask a GTNH team member if you cannot publish
+one.
 :::

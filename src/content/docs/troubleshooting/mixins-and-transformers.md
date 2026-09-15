@@ -16,6 +16,6 @@ capturing the failure:
 - `-Dfml.debugAccessTransformer=true` logs access-transformer application.
 - `-Dlegacy.debugClassLoading=true` enables legacy class-loading diagnostics.
 
-Start with the one flag matching the symptom; broad class dumps can be large.
+Start with the flag matching the symptom; class dumps can be large.
 See the [Development wiki's JVM flag reference](https://wiki.gtnewhorizons.com/wiki/Development#JVM_flags)
 for advanced flags and their code references.

@@ -5,17 +5,15 @@ sidebar:
   order: 2
 ---
 
-Start with the issue, feature, or broken behavior—not a familiar repository
-name. Search the [GTNewHorizons organization](https://github.com/GTNewHorizons)
-and read candidate repositories' README files, open issues, and recent pull
-requests. A similarly named project may be a dependency rather than the owner
-of the change.
+Start from the issue or behavior. Search the
+[GTNewHorizons organization](https://github.com/GTNewHorizons), then inspect
+candidate README files, issues, and recent pull requests. A similarly named
+project may only be a dependency.
 
-If ownership is still unclear, use
+If unclear, use
 [Find where a change belongs](/gtnh-developer-handbook/how-to/find-change-location/)
-or ask in the [official GTNH Discord](https://discord.gg/EXshrPV) with the issue
-and code you already found. Do not open identical pull requests in several
-repositories.
+or ask in the [official GTNH Discord](https://discord.gg/EXshrPV) with your
+findings. Do not open duplicate pull requests across repositories.
 
 For a new standalone 1.7.10 mod, follow the current
 [ExampleMod1.7.10 starter instructions](https://github.com/GTNewHorizons/ExampleMod1.7.10#getting-started).
@@ -31,5 +29,5 @@ Inspect these files when present:
 - `.github/workflows/` for the tasks and environment used by CI; and
 - `gradle.properties` and dependency files for project settings.
 
-Treat those checked-in files as repository facts, not universal GTNH policy.
+Treat checked-in files as repository facts, not universal GTNH policy.
 Next, [fork, clone, and import it](/gtnh-developer-handbook/start-here/fork-clone-and-import/).

@@ -17,13 +17,12 @@ it only when authorized and when a new experimental build is intended.
 3. Select **Run workflow**, choose `master`, and confirm the run.
 4. Open the queued run and monitor its build, pack-test, and upload jobs.
 
-The current workflow generates the experimental manifest from the latest
-available mod versions, assembles Java 8 and modern-Java client/server packages,
-runs the shared modpack tests, uploads artifacts, and commits the generated
-metadata back to `master`.
+The workflow selects the latest mod versions, assembles Java 8 and modern-Java
+client/server packages, runs modpack tests, uploads artifacts, and commits the
+generated metadata to `master`.
 
-After success, verify the uploaded packages and the workflow's generated commit.
-If a job fails, preserve the first failed job's log and check whether publication
-or the final commit partially completed before rerunning. The
+Verify the uploaded packages and generated commit. On failure, preserve the
+first failed job's log and check for partial publication or commits before
+rerunning. The
 [workflow file](https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/.github/workflows/experimental-modpack-build.yml)
 is authoritative.

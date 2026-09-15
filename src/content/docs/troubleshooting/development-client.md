@@ -15,5 +15,5 @@ sidebar:
 5. Compare JVM arguments and working directory with the generated IntelliJ run
    configuration before changing memory or graphics settings.
 
-GTNHGradle projects can generate run configurations, but older or specialized
-repositories may provide different runs. Follow the current checkout.
+Use the runs provided by the current checkout; older and specialized
+repositories may differ from GTNHGradle defaults.

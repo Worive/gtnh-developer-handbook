@@ -10,8 +10,8 @@ import { TabItem, Tabs } from '@astrojs/starlight/components';
 ## List what this checkout provides
 
 :::note[Repository-specific]
-GTNH repositories do not share one guaranteed task set. Use the checked-in
-wrapper and inspect the current project before running a task from another guide.
+Task sets vary by repository. Use the checked-in wrapper and inspect the current
+project.
 :::
 
 <Tabs syncKey="operating-system">
@@ -31,8 +31,8 @@ gradlew.bat tasks --all
   </TabItem>
 </Tabs>
 
-**Expected result:** a grouped list of task names and descriptions. The wrapper
-downloads the repository's configured Gradle distribution on first use. The
+**Expected result:** a grouped task list. The wrapper downloads the configured
+Gradle distribution on first use. The
 current [ExampleMod wrapper configuration](https://github.com/GTNewHorizons/ExampleMod1.7.10/blob/master/gradle/wrapper/gradle-wrapper.properties)
 shows why you should not substitute a globally installed Gradle.
 
@@ -46,9 +46,8 @@ After copying a task name from the list, ask Gradle for its details:
 
 On Windows, replace `./gradlew` with `gradlew.bat`.
 
-**Expected result:** Gradle prints the task path, type, options, and description
-when available. If the task is absent, re-check the spelling and whether you are
-in the repository root.
+**Expected result:** Gradle prints the task path, type, options, and available
+description. If absent, check the spelling and repository root.
 
 ## Choose the right task
 
@@ -63,8 +62,8 @@ in the repository root.
 
 ## Use local overrides
 
-Prefer a property listed by `propertiesHelp` over editing build logic. Some
-GTNHGradle projects also support ignored `addon.local.gradle` and
+Prefer a `propertiesHelp` property to editing build logic. Some GTNHGradle
+projects also support ignored `addon.local.gradle` and
 `addon.late.local.gradle` files for machine-specific configuration; confirm the
 mechanism in that repository or the
 [ExampleMod advanced guidance](https://github.com/GTNewHorizons/ExampleMod1.7.10#advanced).

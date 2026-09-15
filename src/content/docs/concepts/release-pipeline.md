@@ -5,9 +5,8 @@ sidebar:
   order: 3
 ---
 
-A merged mod pull request and a downloadable GTNH build are different states.
-Use the repositories and workflow runs at each boundary to determine what is
-actually available.
+A merged pull request is not yet a downloadable GTNH build. Verify each artifact
+boundary separately.
 
 ## Follow the artifacts
 
@@ -31,7 +30,6 @@ In version `2.9.0`, each position has a different meaning:
 
 - `2` is the run generation. When this number changes, start a new playthrough.
 - `9` is the major release number. Major releases contain substantial changes.
-  The current expected pace is about one per year, but this is not a guarantee.
 - `0` is the maintenance release number. These releases primarily contain fixes,
   but may also include features or other non-bug changes.
 
@@ -44,10 +42,8 @@ and then a stable version:
 
 `2.9.0-beta-1` → `2.9.0-beta-2` → `2.9.0-rc-1` → `2.9.0`
 
-There may be several beta rounds while changes and migration problems are
-resolved. Once a beta is considered release-ready, it becomes a release
-candidate. Ideally only one release candidate is needed. Another can be
-published if testing finds a release blocker.
+Beta rounds resolve changes and migration problems. A release-ready beta becomes
+a release candidate; release blockers can require another candidate.
 
 The current naming history is visible in the
 [modpack releases](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/releases).
@@ -62,9 +58,8 @@ For a change expected in a daily build, record:
 - the version selected by the current DreamAssemblerXXL manifest; and
 - the daily build run and release.
 
-A green mod CI run proves that commit passed those checks. It does not prove a
-tag exists, the release published successfully, or DreamAssembler selected that
-version.
+A green mod CI run proves only that the commit passed mod CI. Check the tag,
+published release, manifest selection, and assembled build separately.
 
 Authorized maintainers can continue with
 [Perform release operations](/gtnh-developer-handbook/maintainers/release-operations/) or

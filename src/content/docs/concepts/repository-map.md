@@ -5,8 +5,8 @@ sidebar:
   order: 1
 ---
 
-GTNH is an organization of mods, pack data, build tooling, automation, and
-supporting projects. A player-visible change can cross several of those layers.
+A change can cross GTNH mod, pack-data, build-tooling, and automation
+repositories.
 
 ## Identify the owning artifact
 
@@ -24,19 +24,16 @@ supporting projects. A player-visible change can cross several of those layers.
 | Translation work | [GTNH-Translations](https://github.com/GTNewHorizons/GTNH-Translations) |
 | Repeatable in-game integration tests | [Horizon-QA](https://github.com/GTNewHorizons/Horizon-QA) |
 
-This table provides starting points, not ownership policy. Confirm the result
-from current source, issues, dependency declarations, and maintainers.
+Confirm ownership from current source, issues, dependencies, and maintainers.
 
 ## Separate ownership from support
 
-A repository living in the organization does not by itself describe the kind of
-support it receives. Consult the officially linked
+Organization membership does not define support level. Consult the
 [mod support spreadsheet](https://docs.google.com/spreadsheets/d/1LHd8c4FLLHiJqsuTppF2XFTE6bh-mXE7afVwGbzOKms)
 and its current legend.
 
-If the spreadsheet has no repository link, GTNH may consume the upstream mod
-without GTNH-specific changes. Confirm in the official Discord's developer
-channels before creating a fork or duplicate pull request.
+A missing repository link may mean GTNH consumes the upstream mod unchanged.
+Confirm in the Discord developer channels before creating a fork.
 
 When a change crosses repositories, identify the dependency order and link every
 required pull request. Do not assume merging one repository immediately updates

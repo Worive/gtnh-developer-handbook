@@ -15,9 +15,7 @@ sidebar:
 - State exactly how the change was tested.
 - Target the branch named by the repository's current contribution instructions.
 
-Do not mix drive-by cleanup with the requested change; it makes review and
-rollback harder.
+Exclude unrelated cleanup because it complicates review and rollback.
 
-Maintainers may temporarily include a pull request in a development build for
-broader testing. This is case-by-case, and the author remains responsible for
-investigating problems found there.
+Maintainers may include a pull request temporarily in a development build. The
+author remains responsible for problems found there.

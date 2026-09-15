@@ -5,13 +5,12 @@ sidebar:
   order: 4
 ---
 
-Understand the changed class or method before deciding what to test. At minimum,
-run the repository's relevant build checks and exercise the changed behavior in
+Run the repository's relevant build checks and exercise the changed behavior in
 its development environment.
 
-Test in a current full development pack when the change can interact with other
-mods, pack configuration, recipes, world data, or startup order. For coordinated
-repository changes, test the exact artifact versions together with
+Use a current full development pack for changes involving other mods, pack
+configuration, recipes, world data, or startup order. Test coordinated artifact
+versions together with
 [Maven Local](/gtnh-developer-handbook/how-to/test-cross-repository-changes/) or
 an online pre-release that CI can resolve.
 

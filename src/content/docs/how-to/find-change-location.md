@@ -7,14 +7,11 @@ sidebar:
 
 ## Start from evidence
 
-Collect the smallest reproducible example: the visible name, log message,
-configuration key, class name, or stack-trace frame. Search that exact text in
-GitHub and in your checkout before searching broad concepts.
+Collect a visible name, log message, configuration key, class name, or
+stack-trace frame. Search that exact text in GitHub and the checkout first.
 
-The [GTNewHorizons organization](https://github.com/GTNewHorizons) contains the
-modpack, individual mods, libraries, build tooling, and infrastructure. A pack
-issue may therefore require a change in a mod repository, while a dependency or
-build failure may belong to [GTNHGradle](https://github.com/GTNewHorizons/GTNHGradle),
+Pack issues may belong to an individual mod; dependency and build failures may
+belong to [GTNHGradle](https://github.com/GTNewHorizons/GTNHGradle),
 [RetroFuturaGradle](https://github.com/GTNewHorizons/RetroFuturaGradle), or a
 shared workflow.
 
@@ -44,6 +41,6 @@ You should be able to name:
 - the task that verifies the change; and
 - an issue, code path, or maintainer confirmation supporting that choice.
 
-If not, bring those partial findings to the
+Otherwise, bring the partial findings to the
 [official GTNH Discord](https://discord.gg/EXshrPV) or the relevant issue. For build
 behavior, [inspect Gradle tasks](/gtnh-developer-handbook/how-to/gradle-tasks/) before assuming the task name.
