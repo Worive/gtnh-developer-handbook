@@ -10,7 +10,7 @@ sidebar:
 - Explain what changes, why it changes, and which part of the pack it affects.
 - Write the title with changelog readers in mind.
 - Link the issue, prior discussion, and dependent pull requests.
-- Add screenshots or video when behavior is visual.
+- For a visual change, include before-and-after screenshots taken from a comparable view. For a new visual implementation with no previous state, include screenshots showing the result. Add video when motion or interaction cannot be reviewed clearly in still images.
 - Include a flowchart when required for a new recipe chain.
 - State exactly how the change was tested.
 - Target the branch named by the repository's current contribution instructions.

@@ -128,6 +128,6 @@ provides:
 - reference counts and translated-value hover information; and
 - section folding and sticky headings based on `#` comment depth.
 
-The extension is fully AI-generated. Treat its results as editor assistance and
-verify keys, formatting, and references against the source files and the GT5
-localization guide.
+:::note[AI-generated tool]
+The extension is fully AI-generated. Treat its results as editor assistance and verify keys, formatting, and references against the source files and the GT5 localization guide.
+:::
