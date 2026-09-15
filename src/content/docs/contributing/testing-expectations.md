@@ -14,5 +14,7 @@ versions together with
 [Maven Local](/gtnh-developer-handbook/how-to/test-cross-repository-changes/) or
 an online pre-release that CI can resolve.
 
+:::tip[Report reviewable evidence]
 Report commands, environment, tested behavior, and result in the pull request.
 Screenshots complement behavioral tests; they do not replace them.
+:::

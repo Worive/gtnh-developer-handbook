@@ -5,8 +5,13 @@ sidebar:
   order: 4
 ---
 
-**Signs:** code compiles in Gradle but appears unresolved in the editor,
-generated sources are missing, or navigation stops working.
+import { Steps } from '@astrojs/starlight/components';
+
+:::note[Signs]
+Code compiles in Gradle but appears unresolved in the editor, generated sources are missing, or navigation stops working.
+:::
+
+<Steps>
 
 1. Wait for Gradle synchronization before judging indexing results.
 2. Confirm the terminal build works with the repository-required JDK.
@@ -14,6 +19,8 @@ generated sources are missing, or navigation stops working.
    the build model.
 4. Check whether generation is performed by a documented Gradle task.
 5. Invalidate IntelliJ caches only after confirming the Gradle model and build.
+
+</Steps>
 
 For older repositories that expose `setupDecompWorkspace`, the
 [Development wiki](https://wiki.gtnewhorizons.com/wiki/Development#Common_Issues)

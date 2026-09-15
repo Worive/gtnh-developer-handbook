@@ -3,8 +3,10 @@ title: Isolate optional-mod integrations
 description: Keep GTNH mods loadable when an optional dependency is absent or has a different API.
 ---
 
+:::caution[The JVM can resolve types before your guard]
 The JVM may resolve an optional mod's types while loading the containing class,
 before an installation check inside a method runs.
+:::
 
 ## Put integration code behind a boundary
 

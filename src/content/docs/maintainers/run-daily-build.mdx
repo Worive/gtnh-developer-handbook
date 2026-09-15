@@ -5,6 +5,8 @@ sidebar:
   order: 1
 ---
 
+import { Steps } from '@astrojs/starlight/components';
+
 The
 [Daily modpack build workflow](https://github.com/GTNewHorizons/DreamAssemblerXXL/actions/workflows/daily-modpack-build.yml)
 supports manual runs. Its
@@ -18,11 +20,15 @@ This workflow can publish a daily release and update repository data. Run it
 only when you are authorized and a manual build is needed.
 :::
 
+<Steps>
+
 1. Open the [DreamAssemblerXXL Actions page](https://github.com/GTNewHorizons/DreamAssemblerXXL/actions).
 2. Select **Daily modpack build** in the left sidebar.
 3. Select **Run workflow** above the workflow-run list.
 4. Choose the **master** branch.
 5. Select the green **Run workflow** button.
+
+</Steps>
 
 **Expected result:** a new run appears near the top of the list, initially
 queued or in progress.

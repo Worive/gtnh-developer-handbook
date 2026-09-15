@@ -12,6 +12,7 @@ Use GTNH's shared number-formatting utilities for player-facing values. Use
 `formatFluid` and `getFluidUnit` where applicable so fluid units follow the
 player's configuration.
 
+:::caution[Do not parse display text]
 Never parse a localized result back into a number. Grouping and decimal
 separators differ by locale. A Large Boiler change failed for German values
 using a comma decimal separator and for English values containing a thousands
@@ -20,6 +21,7 @@ separator
 
 Calculate with the original number. For a machine-readable text format, use the
 locale-independent representation required by its protocol.
+:::
 
 ## Translate for the receiving player
 

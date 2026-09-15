@@ -5,10 +5,12 @@ sidebar:
   order: 6
 ---
 
+:::note[Patch ownership]
 GTNH keeps mixin-based fixes and tweaks for Minecraft, Forge, and bundled mods
 whose source cannot be changed directly in
 [Hodgepodge](https://github.com/GTNewHorizons/Hodgepodge). Change a
 GTNH-maintained mod at its source when possible.
+:::
 
 Add diagnostic flags only to a local development run and remove them after
 capturing the failure:

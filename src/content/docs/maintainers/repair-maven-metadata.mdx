@@ -5,6 +5,8 @@ sidebar:
   order: 4
 ---
 
+import { Steps } from '@astrojs/starlight/components';
+
 :::caution[Privileged recovery operation]
 This procedure changes metadata in the GTNH Nexus repository. Continue only
 with Nexus administration access, a confirmed damaged `maven-metadata.xml`, and
@@ -27,6 +29,8 @@ damaged path. Do not widen its scope.
 
 ## Create a missing scoped task
 
+<Steps>
+
 1. In Nexus, open **Settings → Tasks** and select **Create task**.
 2. Choose **Repair - Rebuild Maven repository metadata
    (maven-metadata.xml)**.
@@ -36,6 +40,8 @@ damaged path. Do not widen its scope.
 5. Recheck the scope, run it once, and monitor its task log.
 6. Fetch the affected `maven-metadata.xml` and verify its versions and checksum
    before declaring the incident resolved.
+
+</Steps>
 
 Keep repair tasks manual. Recurring corruption requires investigation of the
 publishing or storage cause.

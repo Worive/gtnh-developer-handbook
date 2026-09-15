@@ -23,11 +23,13 @@ the same pull request.
 
 ## Follow the AI usage policy
 
+:::caution[Read before using AI]
 The
 [AI usage policy](https://github.com/GTNewHorizons/GTNH-Dev-Doc/blob/master/AI_POLICY.md)
 covers code, documentation, issues, discussions, pull requests, and media. It
 requires contributors to understand submitted code, review and edit assisted
 text, and write commit messages and pull request descriptions in their own
 voice. Read the full policy before using AI.
+:::
 
 Next, [find the repository that owns the change](/gtnh-developer-handbook/how-to/find-change-location/).

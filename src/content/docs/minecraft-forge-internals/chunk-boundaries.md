@@ -3,8 +3,10 @@ title: Work safely across chunk boundaries
 description: Avoid forced chunk loads, false air results, and stale tile references.
 ---
 
+:::caution[Coordinates do not imply a loaded chunk]
 Coordinates do not guarantee that a chunk is loaded or that a previously found
 object is still valid.
+:::
 
 ## Check before reading
 

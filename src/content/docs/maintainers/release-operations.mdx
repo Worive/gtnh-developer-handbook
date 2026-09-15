@@ -5,6 +5,8 @@ sidebar:
   order: 3
 ---
 
+import { Steps } from '@astrojs/starlight/components';
+
 :::caution[Maintainer operation]
 Pushing a tag can publish releases and Maven artifacts consumed by other mods
 and DreamAssembler. Continue only when you are authorized for the target
@@ -28,10 +30,14 @@ increments the last numeric part of the recent tag format.
 The public repository does not declare the production schedule or all current
 exceptions. Before tagging manually:
 
+<Steps>
+
 1. Check the target repository's recent tags, releases, and Actions runs.
 2. Check whether the target commit is already tagged.
 3. Confirm with the current release coordinator whether automation is expected
    to handle this repository.
+
+</Steps>
 
 `.github/workflows/release-tags.yml` defines behavior after a tag is pushed, not
 who should create it.

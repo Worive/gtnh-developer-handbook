@@ -3,8 +3,10 @@ title: Understand client and server boundaries
 description: Keep game logic authoritative and client-only code safe on dedicated GTNH servers.
 ---
 
+:::note[Single player hides side errors]
 Single player runs client and server logic in one process. Code can therefore
 work there but desynchronize in multiplayer or crash a dedicated server.
+:::
 
 ## Separate physical environments from logical sides
 

@@ -3,8 +3,10 @@ title: Treat rendering state as shared state
 description: Keep Minecraft 1.7.10 renderers isolated, balanced, and inexpensive per frame.
 ---
 
+:::caution[Render state is shared]
 Minecraft 1.7.10 shares mutable rendering state between draws. Unrestored
 bounds, lighting, blending, color, or matrix state affects later renderers.
+:::
 
 ## Restore everything you change
 

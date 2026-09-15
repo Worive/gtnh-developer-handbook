@@ -5,8 +5,13 @@ sidebar:
   order: 2
 ---
 
-**Signs:** IntelliJ cannot load the Gradle model, artifacts time out, or tasks
-cannot be listed.
+import { Steps } from '@astrojs/starlight/components';
+
+:::note[Signs]
+IntelliJ cannot load the Gradle model, artifacts time out, or tasks cannot be listed.
+:::
+
+<Steps>
 
 1. Confirm you opened the repository root and selected the checked-in wrapper.
 2. Run the wrapper's `tasks --all` in a terminal to separate IDE and build
@@ -16,5 +21,7 @@ cannot be listed.
 4. Compare repository and dependency declarations with the current checkout.
 5. Retry transient service failures. Delete caches only for an identified
    corrupt artifact.
+
+</Steps>
 
 Capture evidence with [Locate logs](/gtnh-developer-handbook/how-to/locate-logs/).

@@ -3,7 +3,9 @@ title: Treat NBT as a persistent schema
 description: Evolve saved GTNH data without changing existing worlds accidentally.
 ---
 
+:::caution[NBT is a compatibility contract]
 Released NBT keys form a persistent schema that newer code must still read.
+:::
 
 ## Distinguish missing from zero
 

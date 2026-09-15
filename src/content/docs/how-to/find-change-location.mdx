@@ -5,6 +5,8 @@ sidebar:
   order: 1
 ---
 
+import { Steps } from '@astrojs/starlight/components';
+
 ## Start from evidence
 
 Collect a visible name, log message, configuration key, class name, or
@@ -17,6 +19,8 @@ shared workflow.
 
 ## Narrow the location
 
+<Steps>
+
 1. Search the exact user-visible string or error text.
 2. Find the code that constructs or consumes it.
 3. Follow imports and calls outward until you reach the behavior to change.
@@ -26,6 +30,8 @@ shared workflow.
    do not treat age alone as evidence that it is wrong.
 6. Confirm that the repository is active and read its README, issue templates,
    and contribution files.
+
+</Steps>
 
 :::tip[Keep the first pull request narrow]
 If the fix needs coordinated changes in two repositories, describe that
