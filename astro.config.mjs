@@ -37,7 +37,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'GTNH Developer Handbook',
-      description: 'Unofficial documentation for GTNH contributors',
+      description: 'Shared practices, workflows, and technical knowledge for GTNH development',
       plugins: [starlightThemeNova()],
       editLink: {
         baseUrl: 'https://github.com/Worive/gtnh-developer-handbook/edit/master/',

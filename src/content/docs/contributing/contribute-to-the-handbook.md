@@ -71,6 +71,23 @@ documentation. Do not copy implementation details that can change separately.
 - Link to current source material for details that may change.
 - Use the same concise, task-oriented style as the existing pages.
 
+## Use formatting to expose structure
+
+Use standard Markdown by default. Use [Starlight components](https://starlight.astro.build/components/using-components/) when they make the existing information easier to scan or apply:
+
+| Format | Use it for |
+| --- | --- |
+| [Asides](https://starlight.astro.build/components/asides/) | A note, tip, warning, or danger that must stand apart from the surrounding explanation. Give custom titles specific meaning, such as `Signs`, `Maintainer operation`, or `Do not parse display text`. |
+| [Steps](https://starlight.astro.build/components/steps/) | An ordered procedure whose sequence matters. Do not use it for an unordered checklist. |
+| [Tabs](https://starlight.astro.build/components/tabs/) | Parallel alternatives such as operating systems, tools, or mutually exclusive workflows. Keep information outside the tabs when it applies to every alternative. |
+| [Cards and card grids](https://starlight.astro.build/components/cards/) | A small set of destinations or categories that readers choose between. Use `LinkCard` when the whole card leads to one destination. |
+| Tables | Comparisons, mappings, compatibility matrices, and compact reference data. |
+| Code blocks | Commands, configuration, output, and examples that readers need to copy or recognize. |
+
+Do not add components only for decoration. A component should reveal priority, sequence, alternatives, or navigation. Keep dense technical explanations as plain headings and paragraphs when no component improves their structure.
+
+Pages that import Starlight components must use `.mdx`. Import components from `@astrojs/starlight/components`, and keep the page's route unchanged when renaming a file from `.md` to `.mdx`.
+
 ## Submit the change
 
 Use **Edit page**, or edit `src/content/docs/` locally. Register new pages in
@@ -82,6 +99,8 @@ Before opening a pull request, run:
 npm install
 npm run build
 ```
+
+Review the rendered page on desktop and mobile when changing components or layout. Check the final diff for altered facts, lost links, and unrelated edits.
 
 Keep the pull request focused and explain what problem the new or updated
 content solves for GTNH developers.
