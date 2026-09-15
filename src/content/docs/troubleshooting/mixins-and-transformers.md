@@ -5,6 +5,11 @@ sidebar:
   order: 6
 ---
 
+GTNH keeps mixin-based fixes and tweaks for Minecraft, Forge, and bundled mods
+whose source cannot be changed directly in
+[Hodgepodge](https://github.com/GTNewHorizons/Hodgepodge). Change a
+GTNH-maintained mod at its source when possible.
+
 Add diagnostic flags only to a local development run and remove them after
 capturing the failure:
 
@@ -15,6 +20,7 @@ capturing the failure:
   an error.
 - `-Dfml.debugAccessTransformer=true` logs access-transformer application.
 - `-Dlegacy.debugClassLoading=true` enables legacy class-loading diagnostics.
+- `-Dhodgepodge.dumpClass=true` dumps classes transformed by Hodgepodge.
 
 Start with the flag matching the symptom; class dumps can be large.
 See the [Development wiki's JVM flag reference](https://wiki.gtnewhorizons.com/wiki/Development#JVM_flags)

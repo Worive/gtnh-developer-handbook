@@ -13,6 +13,7 @@ repositories.
 | Change concerns | Start with |
 | --- | --- |
 | Java or Scala behavior inside a mod | That mod's repository in the [GTNewHorizons organization](https://github.com/GTNewHorizons) |
+| Mixin-based fixes or tweaks to Minecraft, Forge, or a bundled mod whose source cannot be changed directly | [Hodgepodge](https://github.com/GTNewHorizons/Hodgepodge) |
 | Pack configuration, packaged resources, or pack-level data | [GT-New-Horizons-Modpack](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack) |
 | Pack manifests and assembled downloads | [DreamAssemblerXXL](https://github.com/GTNewHorizons/DreamAssemblerXXL) |
 | Shared GTNH Gradle conventions | [GTNHGradle](https://github.com/GTNewHorizons/GTNHGradle) |
@@ -25,6 +26,11 @@ repositories.
 | Repeatable in-game integration tests | [Horizon-QA](https://github.com/GTNewHorizons/Horizon-QA) |
 
 Confirm ownership from current source, issues, dependencies, and maintainers.
+
+Hodgepodge is GTNH's central repository and mod for patches that must modify
+Minecraft, Forge, or another mod through mixins or class transformation. If
+GTNH maintains the target mod's source, fix the behavior in that repository
+instead of adding a Hodgepodge patch.
 
 ## Separate ownership from support
 

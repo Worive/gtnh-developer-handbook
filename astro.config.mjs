@@ -80,6 +80,7 @@ export default defineConfig({
           items: [
             { slug: 'development-practices' },
             { slug: 'development-practices/localized-display-text' },
+            { slug: 'development-practices/gt5-localization' },
             { slug: 'development-practices/optional-mod-integrations' },
           ],
         },

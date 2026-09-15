@@ -41,3 +41,6 @@ for this purpose.
 
 Test a large value, a fractional value, configurable units, and a locale with
 different grouping or decimal separators.
+
+For GT5-specific API, key-naming, placeholder, and language-file layout rules,
+see [Add localized text to GT5](/gtnh-developer-handbook/development-practices/gt5-localization/).
